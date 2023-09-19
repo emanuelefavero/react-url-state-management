@@ -19,10 +19,11 @@ export default function Page() {
       <p>These products are filtered with useState</p>
 
       {/* SEARCH INPUT */}
-      <label htmlFor='search'>Search</label>
+      <label htmlFor='search'>Search: </label>
       <input
         id='search'
         type='search'
+        placeholder='Search products...'
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />

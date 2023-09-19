@@ -18,10 +18,11 @@ export default function Page() {
       <h1>Products</h1>
 
       {/* SEARCH INPUT */}
-      <label htmlFor='search'>Search</label>
+      <label htmlFor='search'>Search: </label>
       <input
         id='search'
         type='search'
+        placeholder='Search products...'
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
