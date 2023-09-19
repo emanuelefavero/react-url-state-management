@@ -1,22 +1,27 @@
 'use client'
 
-// NOTE: This is a simple example of a search filter created with url query
+// NOTE: This is a simple example of a search filter created with url search
 
-import { useState } from 'react'
+import { useCallback } from 'react'
+import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 
 export default function Page() {
   const PRODUCTS = ['iPhone', 'iPad', 'MacBook', 'AirPods', 'Apple Watch']
 
-  const [query, setQuery] = useState('')
+  const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+
+  const search = searchParams.get('search') || ''
 
   const filteredProducts = PRODUCTS.filter((product) => {
-    return product.toLowerCase().includes(query.toLowerCase())
+    return product.toLowerCase().includes(search.toLowerCase())
   })
 
   return (
     <>
       <h1>Products</h1>
-      <p>These products are filtered with url query</p>
+      <p>These products are filtered with url search</p>
 
       {/* SEARCH INPUT */}
       <label htmlFor='search'>Search: </label>
@@ -24,8 +29,15 @@ export default function Page() {
         id='search'
         type='search'
         placeholder='Search products...'
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        value={search}
+        onChange={(e) => {
+          // if search is empty, remove search param from url
+          e.target.value === ''
+            ? router.push(pathname)
+            : // else add search param to url with value
+              // <pathname>?search=<value>
+              router.push(`${pathname}?search=${e.target.value}`)
+        }}
       />
 
       {/* SHOW PRODUCTS OR FILTERED PRODUCTS */}
