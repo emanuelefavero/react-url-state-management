@@ -34,9 +34,9 @@ export default function Page() {
           // if search is empty, remove search param from url
           e.target.value === ''
             ? router.push(pathname)
-            : // else add search param to url with value
+            : // else add search param to url with value and replace current history entry
               // <pathname>?search=<value>
-              router.push(`${pathname}?search=${e.target.value}`)
+              router.replace(`${pathname}?search=${e.target.value}`)
         }}
       />
 
