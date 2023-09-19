@@ -15,7 +15,8 @@ export default function Page() {
 
   return (
     <>
-      <h1>Products</h1>
+      <h1>Products 2</h1>
+      <p>These products are filtered with useState</p>
 
       {/* SEARCH INPUT */}
       <label htmlFor='search'>Search</label>
