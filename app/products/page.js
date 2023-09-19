@@ -1,6 +1,6 @@
 'use client'
 
-// NOTE: This is a simple example of a search filter created with useState
+// NOTE: This is a simple example of a search filter created with url query
 
 import { useState } from 'react'
 
@@ -16,6 +16,7 @@ export default function Page() {
   return (
     <>
       <h1>Products</h1>
+      <p>These products are filtered with url query</p>
 
       {/* SEARCH INPUT */}
       <label htmlFor='search'>Search: </label>
