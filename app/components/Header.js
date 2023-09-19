@@ -1,3 +1,10 @@
+import Link from 'next/link'
+
 export default function Header() {
-  return <div>Header</div>
+  return (
+    <>
+      <Link href='/'>Home</Link>
+      <Link href='/products'>Products</Link>
+    </>
+  )
 }
