@@ -37,6 +37,8 @@ export default function Page() {
             : // else add search param to url with value and replace current history entry
               // <pathname>?search=<value>
               router.replace(`${pathname}?search=${e.target.value}`)
+
+          // TIP: If you want to keep the search param in the url history, use router.push instead. Note: This will add each character to the url history, so it is not always ideal. You could also use onClick instead of onChange to only add the search param to the url history when the user clicks a search button (in that case router.push is more appropriate)
         }}
       />
 
