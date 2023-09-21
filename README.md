@@ -15,6 +15,15 @@ npm run dev
 
 - open `http://localhost:3000` in your browser
 
+## How it works
+
+The app allows you to open two routes:
+
+- `/products` - Filter a list of products using URL search parameter
+- `/products-2` - Filter a list of products using useState hook
+
+> Both approaches have the same functionality, but the first one uses the URL to manage the state, while the second one uses the useState hook
+
 ## Resources
 
 - [Next.js App Router](https://nextjs.org/docs/getting-started/installation)
