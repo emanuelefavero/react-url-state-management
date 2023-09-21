@@ -4,13 +4,13 @@
 
 import { useState } from 'react'
 
-export default function Page() {
-  const PRODUCTS = ['iPhone', 'iPad', 'MacBook', 'AirPods', 'Apple Watch']
+const PRODUCTS = ['iPhone', 'iPad', 'MacBook', 'AirPods', 'Apple Watch']
 
-  const [query, setQuery] = useState('')
+export default function Page() {
+  const [search, setSearch] = useState('')
 
   const filteredProducts = PRODUCTS.filter((product) => {
-    return product.toLowerCase().includes(query.toLowerCase())
+    return product.toLowerCase().includes(search.toLowerCase())
   })
 
   return (
@@ -24,8 +24,8 @@ export default function Page() {
         id='search'
         type='search'
         placeholder='Search products...'
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
       />
 
       {/* SHOW PRODUCTS OR FILTERED PRODUCTS */}

@@ -2,12 +2,11 @@
 
 // NOTE: This is a simple example of a search filter created with url search
 
-import { useCallback } from 'react'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 
-export default function Page() {
-  const PRODUCTS = ['iPhone', 'iPad', 'MacBook', 'AirPods', 'Apple Watch']
+const PRODUCTS = ['iPhone', 'iPad', 'MacBook', 'AirPods', 'Apple Watch']
 
+export default function Page() {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
