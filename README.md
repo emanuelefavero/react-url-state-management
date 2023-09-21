@@ -29,3 +29,7 @@ The app allows you to open two routes:
 - [Next.js App Router](https://nextjs.org/docs/getting-started/installation)
 - [Next.js useSearchParams](https://nextjs.org/docs/app/api-reference/functions/use-search-params)
 - [React Router](https://reactrouter.com/en/main)
+
+## License
+
+- [MIT](LICENSE.md)
