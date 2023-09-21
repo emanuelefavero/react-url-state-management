@@ -4,6 +4,14 @@ This is a simple react app that shows how to use the browser URL to manage state
 
 > Note: The react app is built with Next.js App Router, the same approach can be used with React Router.
 
+## Demo
+
+- [Live Demo](https://react-url-state-management.vercel.app)
+
+#### Screenshot
+
+<img src="screenshot.png" alt="screenshot" width="300">
+
 ## How to run
 
 - Clone the repo, then run the following commands in the root directory
